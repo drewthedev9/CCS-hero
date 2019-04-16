@@ -68,6 +68,8 @@ body {
 .heading-primary{
     color:white;
     text-transform: uppercase;
+    /* hides the animations shakes */
+    backface-visibility: hidden;
    
 }
 
@@ -80,7 +82,11 @@ body {
     text-align: center;
      /* animation properties - for an animation to work */
      animation-name: moveInLeft;
-     animation-duration: 3s;
+     animation-duration: 1.5s;
+     /* animation-delay: 1s; */
+     /* animation will happen x number of times
+     animation-iteration-count: 3; */
+     animation-timing-function: ease-out;
 }
 
 .heading-primary-sub{
@@ -89,7 +95,8 @@ body {
     font-weight: 700;
     letter-spacing: 17.4px;
     text-align: center;
-
+/* shorthand methid to do all of the animations from above CCS will know */
+    animation: moveInRight 1.5s ease-out;
    
 }
 
@@ -104,7 +111,28 @@ body {
 
     }
     80%{
-        transform: translateX(20px)
+        transform: translateX(10px)
+    }
+/* 100% percent being the finish */
+    100%{
+        opacity: 1;
+        /* translate to be back at ts origianl state */
+        transform: translation(0);
+    }
+}
+
+@keyframes moveInRight {
+    /* should only use opcatiy and transform for browser optimization */
+    /* o% oercent being teh start */
+    0% {
+        opacity: 0;
+        /* moving it on the x axis 100  -moves it on the axis righ*/
+        transform: translateX(100px);
+        
+
+    }
+    80%{
+        transform: translateX(-10px)
     }
 /* 100% percent being the finish */
     100%{
