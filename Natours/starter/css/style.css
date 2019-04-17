@@ -17,7 +17,7 @@ box-sizing: border-box;
 
 /* all fonts should be in the body font  all child el wil inherit */
 body {
-    font-family: "lato" sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
