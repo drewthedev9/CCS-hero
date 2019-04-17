@@ -62,7 +62,9 @@ body {
     top: 40%;
     left: 50%;
     /* will do -50 off the elements top:50 and left 50 above */
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
 }
 
 .heading-primary{
@@ -70,6 +72,7 @@ body {
     text-transform: uppercase;
     /* hides the animations shakes */
     backface-visibility: hidden;
+    margin-bottom: 16px;
    
 }
 
@@ -79,7 +82,7 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
-    text-align: center;
+    
      /* animation properties - for an animation to work */
      animation-name: moveInLeft;
      animation-duration: 1.5s;
@@ -94,7 +97,7 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
-    text-align: center;
+    
 /* shorthand methid to do all of the animations from above CCS will know */
     animation: moveInRight 1.5s ease-out;
    
@@ -140,4 +143,90 @@ body {
         /* translate to be back at ts origianl state */
         transform: translation(0);
     }
+}
+
+@keyframes moveInBottom {
+    /* should only use opcatiy and transform for browser optimization */
+    /* o% oercent being teh start */
+    0% {
+        opacity: 0;
+        /* moving it on the x axis 100  -moves it on the axis righ*/
+        transform: translateY(30px);
+    }
+
+/* 100% percent being the finish */
+    100%{
+        opacity: 1;
+        /* translate to be back at ts origianl state */
+        transform: translate(0);
+    }
+}
+
+/* link pseudo classes */
+/* pytting classes together */
+/* this is the initial state for the btn classes */
+.btn:link, 
+btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    /* padding top 15 left and right 40px */
+    padding: 15px 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100px;
+    /* on teh initial state there can be a change on all the properties */
+    transition: all .2s;
+    position: relative;
+}
+
+/* Here we say the  */
+.btn:hover{
+    /* -3 telling the button to move up upon hover img pseudo class */
+    transform: translateY(-3px);
+    /* x axis , y axis , blur , color*/
+    box-shadow: 0 10px 20px rgba(0 ,0,0, 0.2);
+}
+/* active -when you click on it buton changes its state. */
+.btn:active{
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0 ,0,0, 0.2);
+}
+
+.btn-white{
+    background-color: white;
+    color: #777777;
+}
+
+/* aftrer pseudo */
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+
+
+}
+
+.btn-white::after{
+    background-color: white;
+
+}
+
+.btn:hover::after {
+    /* scale increases the size. */
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0;
+
+}
+
+.btn-animated{
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+
 }
