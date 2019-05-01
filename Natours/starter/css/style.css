@@ -165,7 +165,9 @@ body {
 /* link pseudo classes */
 /* pytting classes together */
 /* this is the initial state for the btn classes */
+/* unvisited link */
 .btn:link, 
+/* visited link */
 btn:visited{
     text-transform: uppercase;
     text-decoration: none;
