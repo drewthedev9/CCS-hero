@@ -45,7 +45,7 @@ body {
   text-align: center; }
 
 .heading-primary {
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   /* hides the animations shakes */
   backface-visibility: hidden;
@@ -146,7 +146,7 @@ btn:visited {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
 .btn-white {
-  background-color: white;
+  background-color: #fff;
   color: #777; }
 
 /* aftrer pseudo */
@@ -163,7 +163,7 @@ btn:visited {
   transition: all .4s; }
 
 .btn-white::after {
-  background-color: white; }
+  background-color: #fff; }
 
 .btn:hover::after {
   /* scale increases the size. */

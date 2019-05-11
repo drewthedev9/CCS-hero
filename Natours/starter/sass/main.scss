@@ -2,7 +2,8 @@
  $color-primary-light: #7ed56f;
  $color-primary-dark: #28b485; 
  $color-grey-dark: #777;
- 
+ $color-white: #fff;
+ $color-black: #000;
  /* apply to all elements in HTML dont want any padding or margins */
  *{
     margin: 0;
@@ -64,7 +65,7 @@
     }
     
     .heading-primary{
-        color:white;
+        color:$color-white;
         text-transform: uppercase;
         /* hides the animations shakes */
         backface-visibility: hidden;
@@ -182,16 +183,16 @@
         /* -3 telling the button to move up upon hover img pseudo class */
         transform: translateY(-3px);
         /* x axis , y axis , blur , color*/
-        box-shadow: 0 10px 20px rgba(0 ,0,0, 0.2);
+        box-shadow: 0 10px 20px rgba($color-black, 0.2);
     }
     /* active -when you click on it buton changes its state. */
     .btn:active{
             transform: translateY(-1px);
-            box-shadow: 0 5px 10px rgba(0 ,0,0, 0.2);
+            box-shadow: 0 5px 10px rgba($color-black, 0.2);
     }
     
     .btn-white{
-        background-color: white;
+        background-color: $color-white;
         color: $color-grey-dark;
     }
     
@@ -212,7 +213,7 @@
     }
     
     .btn-white::after{
-        background-color: white;
+        background-color: $color-white;
     
     }
     
