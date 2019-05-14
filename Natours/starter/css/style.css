@@ -24,13 +24,12 @@ body {
   /*  vh so it chnges teh cli-[pth dybamically */
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative; }
-
-.logo-box {
-  position: absolute;
-  /* start from the relative in the header */
-  /* uses these tp reference eg. 40px from top then letf ...so on */
-  top: 40px;
-  left: 40px; }
+  .header_logo-box {
+    position: absolute;
+    /* start from the relative in the header */
+    /* uses these tp reference eg. 40px from top then letf ...so on */
+    top: 40px;
+    left: 40px; }
 
 .logo {
   height: 35px; }
@@ -50,28 +49,26 @@ body {
   /* hides the animations shakes */
   backface-visibility: hidden;
   margin-bottom: 16px; }
-
-.heading-primary-main {
-  /* stack the heding on eachother. */
-  display: block;
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
-  /* animation properties - for an animation to work */
-  animation-name: moveInLeft;
-  animation-duration: 1.5s;
-  /* animation-delay: 1s; */
-  /* animation will happen x number of times
+  .heading-primary-main {
+    /* stack the heding on eachother. */
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    /* animation properties - for an animation to work */
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+    /* animation-delay: 1s; */
+    /* animation will happen x number of times
          animation-iteration-count: 3; */
-  animation-timing-function: ease-out; }
-
-.heading-primary-sub {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 17.4px;
-  /* shorthand methid to do all of the animations from above CCS will know */
-  animation: moveInRight 1.5s ease-out; }
+    animation-timing-function: ease-out; }
+  .heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    /* shorthand methid to do all of the animations from above CCS will know */
+    animation: moveInRight 1.5s ease-out; }
 
 @keyframes moveInLeft {
   /* should only use opcatiy and transform for browser optimization */
