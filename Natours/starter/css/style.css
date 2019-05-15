@@ -30,9 +30,8 @@ body {
     /* uses these tp reference eg. 40px from top then letf ...so on */
     top: 40px;
     left: 40px; }
-
-.logo {
-  height: 35px; }
+  .header .logo {
+    height: 35px; }
 
 .text-box {
   position: absolute;
@@ -113,60 +112,53 @@ body {
     /* translate to be back at ts origianl state */
     transform: translate(0); } }
 
-/* link pseudo classes */
-/* pytting classes together */
-/* this is the initial state for the btn classes */
-/* unvisited link */
-.btn:link,
-btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  /* padding top 15 left and right 40px */
-  padding: 15px 40px;
-  display: inline-block;
-  text-align: center;
-  border-radius: 100px;
-  /* on teh initial state there can be a change on all the properties */
-  transition: all .2s;
-  position: relative; }
-
-/* Here we say the  */
-.btn:hover {
-  /* -3 telling the button to move up upon hover img pseudo class */
-  transform: translateY(-3px);
-  /* x axis , y axis , blur , color*/
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-
-/* active -when you click on it buton changes its state. */
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
-
-.btn-white {
-  background-color: #fff;
-  color: #777; }
-
-/* aftrer pseudo */
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s; }
-
-.btn-white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  /* scale increases the size. */
-  transform: scaleX(1.5) scaleY(1.6);
-  opacity: 0; }
-
-.btn-animated {
-  animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards; }
+.btn {
+  /* link pseudo classes */
+  /* pytting classes together */
+  /* this is the initial state for the btn classes */
+  /* unvisited link */
+  /* Here we say the  */
+  /* active -when you click on it buton changes its state. */
+  /* aftrer pseudo */ }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    /* padding top 15 left and right 40px */
+    padding: 15px 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100px;
+    /* on teh initial state there can be a change on all the properties */
+    transition: all .2s;
+    position: relative; }
+  .btn:hover {
+    /* -3 telling the button to move up upon hover img pseudo class */
+    transform: translateY(-3px);
+    /* x axis , y axis , blur , color*/
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  .btn-white {
+    background-color: #fff;
+    color: #777; }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s; }
+  .btn::after {
+    background-color: #fff; }
+  .btn:hover::after {
+    /* scale increases the size. */
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0; }
+  .btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; }
