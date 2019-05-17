@@ -1,0 +1,10 @@
+.row {
+    max-width: $grid-width;
+    background-color:green;
+    // 0 the margin on top and bottom and auto left & righth
+    margin: 0 auto;
+    margin-bottom: $gutter-vertical;
+
+
+
+}

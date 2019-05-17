@@ -5,14 +5,6 @@
   box-sizing: border-box; }
 
 /* all fonts should be in the body font  all child el wil inherit */
-body {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #777777;
-  padding: 30px; }
-
 @keyframes moveInLeft {
   /* should only use opcatiy and transform for browser optimization */
   /* o% oercent being teh start */
@@ -141,6 +133,12 @@ body {
   .btn-animated {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards; }
+
+.row {
+  max-width: 114rem;
+  background-color: grey;
+  margin: 0 auto;
+  margin-bottom: 80px; }
 
 .header {
   height: 95vh;
