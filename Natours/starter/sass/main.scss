@@ -1,239 +1,25 @@
- $color-primary: #55c57a;
- $color-primary-light: #7ed56f;
- $color-primary-dark: #28b485; 
- $color-grey-dark: #777;
- $color-white: #fff;
- $color-black: #000;
- /* apply to all elements in HTML dont want any padding or margins */
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-    }
-    
-    /* all fonts should be in the body font  all child el wil inherit */
-    body {
-        font-family: 'Merriweather Sans', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.7;
-        color: #777777;
-        padding: 30px;
-    }
-    
-    .header{
-        height:95vh;
-        
-        /* ../goes one level up into the starter folder then into image */
-        /* green over the pic to gradients shading from one color to another */
-        background-image:linear-gradient(
-        to right bottom,
-        rgba($color-primary, 0.8),
-        rgba($color-primary-dark,0.8)), 
-         url(../img/hero.jpg);
-        background-size: cover;
-        /* top stays at the top even at responsivley moving */
-        background-position: top;
-        /*  vh so it chnges teh cli-[pth dybamically */
-        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-        position: relative;
-        // copies the above selector to this point
-        &_logo-box {
-            position: absolute;
-            /* start from the relative in the header */
-            /* uses these tp reference eg. 40px from top then letf ...so on */
-            top: 40px;
-            left: 40px;
-        }
+@import "abstract/functions";
+@import "abstract/mixins";
+@import "abstract/variables";
 
-         .logo{
-        height: 35px;
-        
-    }
+@import "base/base";
+ @import "base/animation";
+ @import "base/typography";
+ @import "base/utilities";
+
+ @import "components/button";
+
+ @import "layout/header";
+
+@import "pages/home";
+
+
+ 
+
+
+    
+    
     
    
-    
-   
-    }
-    .text-box{
-        position: absolute;
-        /* 50% from top and left */
-        top: 40%;
-        left: 50%;
-        /* will do -50 off the elements top:50 and left 50 above */
-        transform: translate(-50%, -50%);
-        text-align: center;
-        
-    }
-    
-    .heading-primary{
-        color:$color-white;
-        text-transform: uppercase;
-        /* hides the animations shakes */
-        backface-visibility: hidden;
-        margin-bottom: 16px;
-       &-main {
-             /* stack the heding on eachother. */
-        display: block;
-        font-size: 60px;
-        font-weight: 400;
-        letter-spacing: 35px;
-        
-         /* animation properties - for an animation to work */
-         animation-name: moveInLeft;
-         animation-duration: 1.5s;
-         /* animation-delay: 1s; */
-         /* animation will happen x number of times
-         animation-iteration-count: 3; */
-         animation-timing-function: ease-out;
-       }
 
-        &-sub{
-            display: block;
-        font-size: 20px;
-        font-weight: 700;
-        letter-spacing: 17.4px;
-        
-    /* shorthand methid to do all of the animations from above CCS will know */
-        animation: moveInRight 1.5s ease-out;
-        }
-
-    }
-    
-    @keyframes moveInLeft {
-        /* should only use opcatiy and transform for browser optimization */
-        /* o% oercent being teh start */
-        0% {
-            opacity: 0;
-            /* moving it on the x axis -100  -moves it on the axis left*/
-            transform: translateX(-100px);
-            
-    
-        }
-        80%{
-            transform: translateX(10px)
-        }
-    /* 100% percent being the finish */
-        100%{
-            opacity: 1;
-            /* translate to be back at ts origianl state */
-            transform: translation(0);
-        }
-    }
-    
-    @keyframes moveInRight {
-        /* should only use opcatiy and transform for browser optimization */
-        /* o% oercent being teh start */
-        0% {
-            opacity: 0;
-            /* moving it on the x axis 100  -moves it on the axis righ*/
-            transform: translateX(100px);
-            
-    
-        }
-        80%{
-            transform: translateX(-10px)
-        }
-    /* 100% percent being the finish */
-        100%{
-            opacity: 1;
-            /* translate to be back at ts origianl state */
-            transform: translation(0);
-        }
-    }
-    
-    @keyframes moveInBottom {
-        /* should only use opcatiy and transform for browser optimization */
-        /* o% oercent being teh start */
-        0% {
-            opacity: 0;
-            /* moving it on the x axis 100  -moves it on the axis righ*/
-            transform: translateY(30px);
-        }
-    
-    /* 100% percent being the finish */
-        100%{
-            opacity: 1;
-            /* translate to be back at ts origianl state */
-            transform: translate(0);
-        }
-    }
-    
-
-    .btn {
-         /* link pseudo classes */
-    /* pytting classes together */
-    /* this is the initial state for the btn classes */
-    /* unvisited link */
-
-
-    &:link, 
-    /* visited link */
-    &:visited{
-        text-transform: uppercase;
-        text-decoration: none;
-        /* padding top 15 left and right 40px */
-        padding: 15px 40px;
-        display: inline-block;
-        text-align: center;
-        border-radius: 100px;
-        /* on teh initial state there can be a change on all the properties */
-        transition: all .2s;
-        position: relative;
-    }
-    
-    /* Here we say the  */
-    &:hover{
-        /* -3 telling the button to move up upon hover img pseudo class */
-        transform: translateY(-3px);
-        /* x axis , y axis , blur , color*/
-        box-shadow: 0 10px 20px rgba($color-black, 0.2);
-    }
-    /* active -when you click on it buton changes its state. */
-    &:active{
-            transform: translateY(-1px);
-            box-shadow: 0 5px 10px rgba($color-black, 0.2);
-    }
-    
-    &-white{
-        background-color: $color-white;
-        color: $color-grey-dark;
-    }
-    
-    /* aftrer pseudo */
-    &::after{
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 100px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4s;
-    
-    
-    }
-    
-    &::after{
-        background-color: $color-white;
-    
-    }
-    
-    &:hover::after {
-        /* scale increases the size. */
-        transform: scaleX(1.5) scaleY(1.6);
-        opacity: 0;
-    
-    }
-    
-    &-animated{
-        animation: moveInBottom .5s ease-out .75s;
-        animation-fill-mode: backwards;
-    
-    }
-
-    }
    

@@ -1,0 +1,10 @@
+ /* apply to all elements in HTML dont want any padding or margins */
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+    
+    /* all fonts should be in the body font  all child el wil inherit */
+   

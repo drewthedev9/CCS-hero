@@ -1,0 +1,44 @@
+.header{
+    height:95vh;
+    
+    /* ../goes one level up into the starter folder then into image */
+    /* green over the pic to gradients shading from one color to another */
+    background-image:linear-gradient(
+    to right bottom,
+    rgba($color-primary, 0.8),
+    rgba($color-primary-dark,0.8)), 
+     url(../img/hero.jpg);
+    background-size: cover;
+    /* top stays at the top even at responsivley moving */
+    background-position: top;
+    /*  vh so it chnges teh cli-[pth dybamically */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+    // copies the above selector to this point
+    &_logo-box {
+        position: absolute;
+        /* start from the relative in the header */
+        /* uses these tp reference eg. 40px from top then letf ...so on */
+        top: 40px;
+        left: 40px;
+    }
+
+     .logo{
+    height: 35px;
+    
+}
+
+
+
+
+}
+.text-box{
+    position: absolute;
+    /* 50% from top and left */
+    top: 40%;
+    left: 50%;
+    /* will do -50 off the elements top:50 and left 50 above */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}

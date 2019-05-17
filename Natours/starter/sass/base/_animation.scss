@@ -1,0 +1,58 @@
+@keyframes moveInLeft {
+    /* should only use opcatiy and transform for browser optimization */
+    /* o% oercent being teh start */
+    0% {
+        opacity: 0;
+        /* moving it on the x axis -100  -moves it on the axis left*/
+        transform: translateX(-100px);
+        
+
+    }
+    80%{
+        transform: translateX(10px)
+    }
+/* 100% percent being the finish */
+    100%{
+        opacity: 1;
+        /* translate to be back at ts origianl state */
+        transform: translation(0);
+    }
+}
+
+@keyframes moveInRight {
+    /* should only use opcatiy and transform for browser optimization */
+    /* o% oercent being teh start */
+    0% {
+        opacity: 0;
+        /* moving it on the x axis 100  -moves it on the axis righ*/
+        transform: translateX(100px);
+        
+
+    }
+    80%{
+        transform: translateX(-10px)
+    }
+/* 100% percent being the finish */
+    100%{
+        opacity: 1;
+        /* translate to be back at ts origianl state */
+        transform: translation(0);
+    }
+}
+
+@keyframes moveInBottom {
+    /* should only use opcatiy and transform for browser optimization */
+    /* o% oercent being teh start */
+    0% {
+        opacity: 0;
+        /* moving it on the x axis 100  -moves it on the axis righ*/
+        transform: translateY(30px);
+    }
+
+/* 100% percent being the finish */
+    100%{
+        opacity: 1;
+        /* translate to be back at ts origianl state */
+        transform: translate(0);
+    }
+}

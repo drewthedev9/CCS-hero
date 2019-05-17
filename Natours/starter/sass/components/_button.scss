@@ -1,0 +1,81 @@
+.btn {
+    /* link pseudo classes */
+/* pytting classes together */
+/* this is the initial state for the btn classes */
+/* unvisited link */
+
+
+&:link, 
+/* visited link */
+&:visited{
+   text-transform: uppercase;
+   text-decoration: none;
+   /* padding top 15 left and right 40px */
+   padding: 15px 40px;
+   display: inline-block;
+   text-align: center;
+   border-radius: 100px;
+   /* on teh initial state there can be a change on all the properties */
+   transition: all .2s;
+   position: relative;
+}
+
+/* Here we say the  */
+&:hover{
+   /* -3 telling the button to move up upon hover img pseudo class */
+   transform: translateY(-3px);
+   /* x axis , y axis , blur , color*/
+   box-shadow: 0 10px 20px rgba($color-black, 0.2);
+
+   // button hover after
+   &::after {
+       /* scale increases the size. */
+       transform: scaleX(1.5) scaleY(1.6);
+       opacity: 0;
+   
+   }
+}
+/* active -when you click on it buton changes its state. */
+&:active{
+       transform: translateY(-1px);
+       box-shadow: 0 5px 10px rgba($color-black, 0.2);
+}
+
+&-white{
+   background-color: $color-white;
+   color: $color-grey-dark;
+
+    /* aftrer pseudo */
+   //  nested = button-white-::after; 
+&::after{
+   content: "";
+   display: inline-block;
+   height: 100%;
+   width: 100%;
+   border-radius: 100px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   transition: all .4s;
+
+
+}
+}
+
+
+
+&::after{
+   background-color: $color-white;
+
+}
+
+
+
+&-animated{
+   animation: moveInBottom .5s ease-out .75s;
+   animation-fill-mode: backwards;
+
+}
+
+}
