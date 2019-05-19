@@ -22,11 +22,16 @@ display: flex;
 .sidebar{
 
     background-color: var(--color-grey-dark-1);
+    // shorthand.
     // grow,shrink, width percentage.
     flex: 0 0 18%;
 }
 
 .hotel-view{
     background-color: #fff;
+    background-color: orange;
+    // grow as muach as posibble = 1;: in other words
+    // the remaining 82 percent from the 18% being used in nav bar.
+    flex: 1;
 
 }
