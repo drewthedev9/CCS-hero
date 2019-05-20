@@ -74,3 +74,6 @@ body {
   background-color: #fff;
   background-color: orange;
   flex: 1; }
+
+.logo {
+  height: 3.25rem; }
