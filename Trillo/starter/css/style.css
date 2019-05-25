@@ -77,3 +77,15 @@ body {
 
 .logo {
   height: 3.25rem; }
+
+.search__icon {
+  height: 2rem;
+  width: 2rem;
+  fill: var(--color-grey-dark-3); }
+
+.user-nav_icon {
+  height: 2.25rem;
+  width: 2.25rem; }
+
+.user-nav_user-photo {
+  height: 2.25rem; }
