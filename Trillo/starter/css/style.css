@@ -83,9 +83,10 @@ body {
   width: 2rem;
   fill: var(--color-grey-dark-3); }
 
-.user-nav_icon {
+.user-nav__icon {
   height: 2.25rem;
   width: 2.25rem; }
 
-.user-nav_user-photo {
-  height: 2.25rem; }
+.user-nav__user-photo {
+  height: 2.25rem;
+  border-radius: 50%; }

@@ -24,25 +24,26 @@
 /////////// USER Navigation////////
 
 .user-nav{
-    &_icon-box{
+    &__icon-box{
 
     }
 
-    &_icon{
+    &__icon{
         height: 2.25rem;
         width: 2.25rem;
     }
 
-    &_notification{
+    &__notification{
 
     }
 
-    &_user {
+    &__user {
 
     }
 
-    &_user-photo {
+    &__user-photo {
         height: 2.25rem;
+        border-radius: 50%;
 
     }
 
