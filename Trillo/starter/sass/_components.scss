@@ -67,6 +67,15 @@
 
 .user-nav{
     background-color: greenyellow;
+    // turns this into container.
+    display: flex;
+    // align vertically.
+    align-items: center;
+
+    // select the direct children of user-nav.
+    & > * {
+
+    } 
     &__icon-box{
 
     }

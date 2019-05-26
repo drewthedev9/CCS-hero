@@ -59,6 +59,7 @@ body {
   min-height: 50rem; }
 
 .header {
+  font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);
@@ -118,7 +119,9 @@ body {
     fill: var(--color-grey-dark-3); }
 
 .user-nav {
-  background-color: greenyellow; }
+  background-color: greenyellow;
+  display: flex;
+  align-items: center; }
   .user-nav__icon {
     height: 2.25rem;
     width: 2.25rem; }
