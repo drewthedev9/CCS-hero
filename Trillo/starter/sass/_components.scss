@@ -2,6 +2,7 @@
 /////////LOGO//////////
 .logo {
    height: 3.25rem;
+   margin-left: 2rem;
 }
 ////////SEARCH BOX//////@at-root
 
@@ -66,40 +67,58 @@
 /////////// USER Navigation////////
 
 .user-nav{
-    background-color: greenyellow;
+    align-self: stretch;
     // turns this into container.
+    
     display: flex;
     // align vertically.
     align-items: center;
 
-    // select the direct children of user-nav.
+    // select the direct children of user-nav element.
     & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex ;
+        align-items: center;
 
+    }
+    
+    & > *:hover {
+        background-color: var(--color-grey-light-2);
     } 
     &__icon-box{
-
+        position: relative;
     }
 
     &__icon{
         height: 2.25rem;
         width: 2.25rem;
+        fill: var(--color-grey-dark-2);
+       
     }
 
     &__notification{
+        font-size: .8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: bar(--color-primary);
+        color: #fff;
+        position: absolute;
+        top: 1.5 rem;
+        right: 1.1rem;
 
-    }
-
-    &__user {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
     }
 
     &__user-photo {
         height: 2.25rem;
         border-radius: 50%;
-
-    }
-
-    &_user-name{
+        margin-right: 1rem;
 
     }
 }
