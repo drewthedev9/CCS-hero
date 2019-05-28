@@ -152,6 +152,7 @@
         background-color: var(--color-primary);
         transform: scaleY(0);
         transition: transform .2s,
+        // animation affects 
                 width .4s cubic-bezier(1,0,0,1) .2s; 
                 background-color: .1s;   
         }
@@ -162,6 +163,7 @@
         width: 100%;
     }
 
+    // active when user clicks down.
     &__item:active:before{
 background-color: var(--color-primary-light);
     }
