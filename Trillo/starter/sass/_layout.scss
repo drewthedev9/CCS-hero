@@ -24,12 +24,16 @@ display: flex;
 
 }
 
-.sidebar{
+.sidebar{                           
 
     background-color: var(--color-grey-dark-1);
     // shorthand.
     // grow,shrink, width percentage.
     flex: 0 0 18%;
+    display: flex;
+    // changes the direction left to right to top to bottom.
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .hotel-view{
@@ -38,5 +42,6 @@ display: flex;
     // grow as muach as posibble = 1;: in other words
     // the remaining 82 percent from the 18% being used in nav bar.
     flex: 1;
+    height:80rem;
 
 }
