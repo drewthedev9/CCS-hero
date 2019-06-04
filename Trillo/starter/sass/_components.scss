@@ -130,6 +130,14 @@
     list-style: none;
     margin-top: 3.5rem;
     
+    @media only sceen and(max-width: $bp-medium){
+        // at 900px will switch the lements in the side-nav
+        // to sit side by side.
+        display: flex;
+        margin: 0;
+    
+    }
+   
 
     &__item{
         position: relative;
@@ -137,6 +145,17 @@
         // chooses evertything thts not the last child.
         &:not(:last-child){
             margin-bottom:.5rem;
+        }
+
+        @media only sceen and(max-width: $bp-medium){
+           margin: 0;
+        
+        }
+
+        @media only sceen and(max-width: $bp-medium){
+            // fex items in nav will grow full width.
+            flex: 1;
+        
         }
     }
 
@@ -179,6 +198,11 @@ background-color: var(--color-primary-light);
         position: relative;
         z-index: 10;
         
+        @media only sceen and(max-width: $bp-medium){
+            justify-content: center;
+            padding: 2rem;
+        
+        }
 
         
     }
@@ -202,6 +226,11 @@ background-color: var(--color-primary-light);
     color: var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+
+    @media only sceen and(max-width: $bp-medium){
+        display: none;
+    
+    }
 
 }
 ////////GALLERY///////
@@ -408,7 +437,9 @@ display: flex;
     }
 
     &__friends{
-
+        // photos of peopel will always stay
+        // side by side.
+        display: flex;
     }
 
     &__photo {
@@ -421,7 +452,7 @@ display: flex;
 
         &:not(:last-child){
             // pictures overlap.
-            margin-right: -1.5rem;
+            margin-right: -2rem;
         }
     }
 }
@@ -438,6 +469,13 @@ display: flex;
     // hides any over flow . in this case the speech
     //  glyphs
     overflow: hidden;
+
+    @media only sceen and(max-width: $bp-medium){
+        padding: 2rem;
+        margin-bottom: 3rem;
+    
+    }
+    
 
     &__text{
         margin-bottom: 2rem;
@@ -508,6 +546,11 @@ display: flex;
     padding: 3.5rem 0;
     text-align: center;
 
+    @media only sceen and(max-width: $bp-medium){
+        padding: 2.5rem 0;
+       
+    
+    }
     
 
     &__book-now {
